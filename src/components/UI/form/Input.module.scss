@@ -1,0 +1,39 @@
+.input-div {
+  border: 1px solid rgb(219, 219, 219);
+  width: 286px;
+  border-radius: 3px;
+
+  label {
+    display: block;
+    position: relative;
+    color: #8e8e8e;
+    font-size: 10px;
+    width: 100%;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    top: 50%;
+    left: 0.5rem;
+    transform: translate(10px, -50%);
+    transition: all 0.1s ease-in;
+    font-size: 14px;
+    &.span-move {
+      transform: translate(0, 0);
+      top: 0;
+      font-size: 10px;
+    }
+  }
+
+  input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 14px;
+    &:focus {
+      outline: none;
+    }
+  }
+}
