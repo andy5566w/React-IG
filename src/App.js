@@ -13,9 +13,9 @@ const App = () => {
   // };
 
   return (
-    <div>
+    <React.Fragment>
       <Login />
-    </div>
+    </React.Fragment>
   );
 };
 
