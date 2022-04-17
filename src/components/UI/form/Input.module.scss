@@ -1,6 +1,6 @@
 .input-div {
   border: 1px solid rgb(219, 219, 219);
-  width: 286px;
+  width: 268px;
   border-radius: 3px;
 
   label {
@@ -30,8 +30,10 @@
 
   input {
     width: 100%;
-    padding: 0.8rem 1rem;
+    padding: 0.7rem 1rem 0.4rem;
     font-size: 14px;
+    color: black;
+    background-color: rgba(219, 219, 219, 0.5);
     &:focus {
       outline: none;
     }
