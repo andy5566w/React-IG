@@ -1,11 +1,15 @@
 import Input from '../UI/form/Input'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import classes from './LoginForm.module.scss'
 import instagram_logo from '../../img/login/instagram_logo.png'
 
 const LoginForm = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [isValid, setIsValid] = useState(false)
+  useEffect(() => {
+    setIsValid(() => email.includes('@') && password.length > 6)
+  }, [email, password])
   return (
     <form className={classes.form}>
       <div className={classes.form__img}>
@@ -19,7 +23,6 @@ const LoginForm = () => {
         }}
       />
       <Input
-        styleName={classes.form__input}
         label={'password'}
         type={'password'}
         value={password}
@@ -27,6 +30,14 @@ const LoginForm = () => {
           setPassword(e.target.value)
         }}
       />
+      <button
+        disabled={!isValid}
+        className={`${classes['form__login-btn']} ${
+          !isValid ? classes.disabled : ''
+        }`}
+      >
+        Login
+      </button>
     </form>
   )
 }
