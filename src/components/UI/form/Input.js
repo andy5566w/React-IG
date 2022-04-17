@@ -1,9 +1,8 @@
 import classes from './Input.module.scss'
 const Input = (props) => {
-  const { type, label, value, handleValue, styleName } = props
-  console.log(classes)
+  const { type, label, value, handleValue } = props
   return (
-    <div className={`${classes['input-div']} ${value ? styleName : ''}`}>
+    <div className={`${classes['input-div']}`}>
       <label>
         <span className={`${value && classes['span-move']}`}>{label}</span>
         <input type={type || 'text'} value={value} onChange={handleValue} />
