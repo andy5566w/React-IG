@@ -4,8 +4,8 @@ import React from 'react'
 // import NewExpense from "./components/NewExpense/NewExpense";
 // import { useSelector } from "react-redux";
 // import Login from './components/Login/Login'
-import Clock from './components/Clock/Clock'
-
+// import Clock from './components/Clock/Clock'
+import Coffee from './components/Coffee/Coffee'
 const App = () => {
   // const expenses = useSelector((state) => state.expense.expenses);
 
@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <Clock />
+      <Coffee />
     </React.Fragment>
   )
 }
