@@ -12,8 +12,8 @@ const Coffee = () => {
         <div className={classes.cup}>
           <div className={classes.top}>
             <div className={classes.vapour}>
-              {vapours.map((i) => (
-                <span style={{ '--i': i }}></span>
+              {vapours.map((i, index) => (
+                <span style={{ '--i': i }} key={index}></span>
               ))}
             </div>
             <div className={classes.circle}>
